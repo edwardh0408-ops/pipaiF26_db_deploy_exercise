@@ -1,0 +1,7 @@
+slot_id,label,day_group,period
+1,Weekday mornings,weekday,morning
+2,Weekday afternoons,weekday,afternoon
+3,Weekday evenings,weekday,evening
+4,Weekend mornings,weekend,morning
+5,Weekend afternoons,weekend,afternoon
+6,Weekend evenings,weekend,evening
