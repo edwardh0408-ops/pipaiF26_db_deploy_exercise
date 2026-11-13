@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class groups</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+      background: #f6f3ec;
+      color: #1d1a16;
+      line-height: 1.4;
+    }
+    header, main {
+      max-width: 76rem;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 0;
+    }
+    main {
+      padding-bottom: 3rem;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin: 0 0 0.4rem;
+    }
+    header p {
+      margin: 0;
+      color: #5c564c;
+    }
+    .group-count {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin: 1.5rem 0 0;
+    }
+    .group-count input {
+      width: 4rem;
+      font: inherit;
+      color: inherit;
+      background: #fff;
+      border: 1px solid #e4dfd4;
+      padding: 0.25rem 0.4rem;
+    }
+    .summary {
+      margin: 0.85rem 0;
+    }
+    .groups {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+    @media (min-width: 64rem) {
+      .groups {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+    }
+    article {
+      background: #fff;
+      border: 1px solid #e4dfd4;
+      padding: 0.9rem 1rem 1rem;
+    }
+    article.missing {
+      border-color: #c4a574;
+    }
+    h2 {
+      font-size: 1.15rem;
+      margin: 0;
+    }
+    .count {
+      margin: 0.25rem 0 0;
+      color: #5c564c;
+      font-size: 0.95rem;
+    }
+    .mix {
+      margin: 0.55rem 0 0;
+      color: #6b645b;
+      font-size: 0.78rem;
+    }
+    ul.roster {
+      list-style: none;
+      margin: 0.8rem 0 0;
+      padding: 0;
+    }
+    ul.roster li {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.28rem 0;
+      border-top: 1px solid #eeeae2;
+    }
+    .group-no {
+      color: #6b645b;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Class groups</h1>
+    <p>Example data for a roster of 30 students. Each name carries a group number.</p>
+  </header>
+  <main>
+    <label class="group-count">
+      Number of groups
+      <input type="number" name="n_groups" value="8" min="1" max="30">
+    </label>
+    <p class="summary">8 groups, 5 missing a kind of student.</p>
+    <div class="groups">
+      <article>
+        <h2>Group 1</h2>
+        <p class="count">4 students</p>
+        <ul class="roster">
+          <li><span>Maya Chen</span> <span class="group-no">1</span></li>
+          <li><span>Owen Brooks</span> <span class="group-no">1</span></li>
+          <li><span>Priya Shah</span> <span class="group-no">1</span></li>
+          <li><span>Luis Ortega</span> <span class="group-no">1</span></li>
+        </ul>
+        <p class="mix">Kind A 2 · Kind B 1 · Kind C 1</p>
+      </article>
+      <article class="missing">
+        <h2>Group 2</h2>
+        <p class="count">4 students</p>
+        <ul class="roster">
+          <li><span>Hannah Kim</span> <span class="group-no">2</span></li>
+          <li><span>Jonah Adler</span> <span class="group-no">2</span></li>
+          <li><span>Fatima Hassan</span> <span class="group-no">2</span></li>
+          <li><span>Chris Doyle</span> <span class="group-no">2</span></li>
+        </ul>
+        <p class="mix">Kind A 2 · Kind B 2 · Kind C 0</p>
+      </article>
+      <article>
+        <h2>Group 3</h2>
+        <p class="count">4 students</p>
+        <ul class="roster">
+          <li><span>Elena Vasquez</span> <span class="group-no">3</span></li>
+          <li><span>Marcus Webb</span> <span class="group-no">3</span></li>
+          <li><span>Aisha Rahman</span> <span class="group-no">3</span></li>
+          <li><span>Ben Carter</span> <span class="group-no">3</span></li>
+        </ul>
+        <p class="mix">Kind A 1 · Kind B 1 · Kind C 2</p>
+      </article>
+      <article class="missing">
+        <h2>Group 4</h2>
+        <p class="count">4 students</p>
+        <ul class="roster">
+          <li><span>Sophie Nguyen</span> <span class="group-no">4</span></li>
+          <li><span>Daniel Okonkwo</span> <span class="group-no">4</span></li>
+          <li><span>Grace Liu</span> <span class="group-no">4</span></li>
+          <li><span>Tyler Singh</span> <span class="group-no">4</span></li>
+        </ul>
+        <p class="mix">Kind A 3 · Kind B 1 · Kind C 0</p>
+      </article>
+      <article>
+        <h2>Group 5</h2>
+        <p class="count">3 students</p>
+        <ul class="roster">
+          <li><span>Nora Patel</span> <span class="group-no">5</span></li>
+          <li><span>Jamal Wright</span> <span class="group-no">5</span></li>
+          <li><span>Ingrid Larsen</span> <span class="group-no">5</span></li>
+        </ul>
+        <p class="mix">Kind A 1 · Kind B 1 · Kind C 1</p>
+      </article>
+      <article class="missing">
+        <h2>Group 6</h2>
+        <p class="count">4 students</p>
+        <ul class="roster">
+          <li><span>Leo Martinez</span> <span class="group-no">6</span></li>
+          <li><span>Camille Dubois</span> <span class="group-no">6</span></li>
+          <li><span>Yosef Cohen</span> <span class="group-no">6</span></li>
+          <li><span>Riley Quinn</span> <span class="group-no">6</span></li>
+        </ul>
+        <p class="mix">Kind A 0 · Kind B 2 · Kind C 2</p>
+      </article>
+      <article class="missing">
+        <h2>Group 7</h2>
+        <p class="count">4 students</p>
+        <ul class="roster">
+          <li><span>Amira Haddad</span> <span class="group-no">7</span></li>
+          <li><span>Felix Berg</span> <span class="group-no">7</span></li>
+          <li><span>Nina Kowalski</span> <span class="group-no">7</span></li>
+          <li><span>Omar Farouk</span> <span class="group-no">7</span></li>
+        </ul>
+        <p class="mix">Kind A 2 · Kind B 0 · Kind C 2</p>
+      </article>
+      <article class="missing">
+        <h2>Group 8</h2>
+        <p class="count">3 students</p>
+        <ul class="roster">
+          <li><span>Lucy Tran</span> <span class="group-no">8</span></li>
+          <li><span>Samir Joshi</span> <span class="group-no">8</span></li>
+          <li><span>Paige Donovan</span> <span class="group-no">8</span></li>
+        </ul>
+        <p class="mix">Kind A 1 · Kind B 2 · Kind C 0</p>
+      </article>
+    </div>
+  </main>
+</body>
+</html>

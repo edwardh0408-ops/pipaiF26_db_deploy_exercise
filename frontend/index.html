@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
-  <ul id="names"></ul>
-  <script>
-    fetch("/api/students")
-      .then(function (response) { return response.json(); })
-      .then(function (names) {
-        var list = document.getElementById("names");
-        names.forEach(function (name) {
-          var item = document.createElement("li");
-          item.textContent = name;
-          list.appendChild(item);
-        });
-      });
-  </script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Class groups</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
